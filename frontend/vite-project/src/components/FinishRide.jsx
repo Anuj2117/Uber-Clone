@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { HiLocationMarker } from "react-icons/hi";
+import { FaStop } from "react-icons/fa";
+import { FaMoneyBill } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
 
 const FinishRide = (props) => {
   const navigate = useNavigate();
@@ -25,66 +29,57 @@ const FinishRide = (props) => {
   }
 
   return (
-    <div>
-      <h5
-        className="p-1 text-center w-[93%] absolute top-0"
-        onClick={() => {
-          props.setFinishRidePanel(false);
-        }}
-      >
-        <i className="text-3xl text-gray-200 ri-arrow-down-wide-line"></i>
-      </h5>
-      <h3 className="text-2xl font-semibold mb-5">Finish this Ride</h3>
-      <div className="flex items-center justify-between p-4 border-2 border-yellow-400 rounded-lg mt-4">
+    <div className="flex flex-col items-center p-3">
+  
+      <h3 className="text-2xl font-bold mb-5">Finish this Ride</h3>
+      <div className="flex items-center justify-between p-4 border-2 border-yellow-400 rounded-lg mt-4 w-full">
         <div className="flex items-center gap-3 ">
-          <img
-            className="h-12 rounded-full object-cover w-12"
-            src="https://i.pinimg.com/236x/af/26/28/af26280b0ca305be47df0b799ed1b12b.jpg"
-            alt=""
-          />
-          <h2 className="text-lg font-medium">
-            {props.ride?.user.fullname.firstname}
+          <FaUser className="bg-gray-200 p-3 rounded-full text-5xl"/>
+          <h2 className="text-lg font-bold ">
+           { props.ride?.user.fullname.firstname 
+            +" "+props.ride?.user.fullname.lastname}
           </h2>
         </div>
-        <h5 className="text-lg font-semibold">2.2 KM</h5>
+        <h5 className="text-lg font-bold">2.2 KM</h5>
       </div>
-      <div className="flex gap-2 justify-between flex-col items-center">
-        <div className="w-full mt-5">
-          <div className="flex items-center gap-5 p-3 border-b-2">
-            <i className="ri-map-pin-user-fill"></i>
-            <div>
-              <h3 className="text-lg font-medium">562/11-A</h3>
-              <p className="text-sm -mt-1 text-gray-600">
-                {props.ride?.pickup}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-5 p-3 border-b-2">
-            <i className="text-lg ri-map-pin-2-fill"></i>
-            <div>
-              <h3 className="text-lg font-medium">562/11-A</h3>
-              <p className="text-sm -mt-1 text-gray-600">
-                {props.ride?.destination}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-5 p-3">
-            <i className="ri-currency-line"></i>
-            <div>
-              <h3 className="text-lg font-medium">₹{props.ride?.fare} </h3>
-              <p className="text-sm -mt-1 text-gray-600">Cash Cash</p>
-            </div>
+
+      <div className="flex flex-col items-center w-full">
+        <div className="flex items-center justify-start bg-white rounded-md shadow-sm gap-5 w-full p-4 mb-2">
+          <HiLocationMarker className="font-bold text-xl " />
+          <div>
+            <h3 className="font-bold text-xl">563/11-A</h3>
+            <p className="font-bold text-sm text-gray-500">
+              {props.ride?.pickup}
+            </p>
           </div>
         </div>
 
-        <div className="mt-10 w-full">
-          <button
-            onClick={endRide}
-            className="w-full mt-5 flex  text-lg justify-center bg-green-600 text-white font-semibold p-3 rounded-lg"
-          >
-            Finish Ride
-          </button>
+        <div className="flex items-center justify-start gap-5 w-full bg-white rounded-md shadow-sm p-5 mb-2">
+          <FaStop className="font-bold text-sm " />
+          <div>
+            <h3 className="font-bold text-xl">Third Wave Coffee</h3>
+            <p className="font-bold text-sm text-gray-500">
+              {props.ride?.destination}
+            </p>
+          </div>
         </div>
+
+        <div className="flex items-center justify-start gap-5 w-full bg-white rounded-md shadow-sm p-5 mb-2">
+          <FaMoneyBill className="font-bold text-sm " />
+          <div>
+            <h3 className="font-bold text-xl">₹{props.ride?.fare || "Fare"}</h3>
+            <p className="font-bold text-sm text-gray-500">CASH UPI </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10 w-full">
+        <button
+          onClick={endRide}
+          className="w-full mt-5 flex  text-lg justify-center bg-black text-white font-semibold p-3 rounded-lg"
+        >
+          Finish Ride
+        </button>
       </div>
     </div>
   );

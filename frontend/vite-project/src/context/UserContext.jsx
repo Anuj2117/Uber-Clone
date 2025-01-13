@@ -11,6 +11,7 @@ function UserContext({ children }) {
     },
   });
   const [vehicleType, setVehicleType] = useState(null);
+  // const [confirmRidePanelOpen, setConfirmRidePanelOpen] = useState(false);
 
   return (
     <>

@@ -32,8 +32,8 @@ function RidePopUp(props) {
 
         <div className="h-[0.2vh] bg-gray-200"></div>
 
-        <div className="flex flex-col items-center">
-          <div className="flex items-center justify-start bg-white rounded gap-5 w-full p-4 shadow-2xl">
+        <div className="flex flex-col items-center gap-1">
+          <div className="flex items-center justify-start bg-gray-100 rounded gap-5 w-full p-4 shadow-2xl">
             <HiLocationMarker className="font-bold text-xl" />
             <div className="">
               <h3 className="font-bold text-xl">563/11-A</h3>
@@ -44,7 +44,7 @@ function RidePopUp(props) {
             <hr />
           </div>
 
-          <div className="flex items-center justify-start gap-5  w-full bg-white rounded p-5 shadow-2xl">
+          <div className="flex items-center justify-start gap-5  w-full bg-gray-100 rounded p-5 shadow-2xl">
             <FaStop className="font-bold text-sm" />
             <div>
               <h3 className="font-bold text-xl">Third Wave Coffee</h3>
@@ -54,7 +54,7 @@ function RidePopUp(props) {
             </div>
           </div>
 
-          <div className="flex items-center justify-start gap-5  w-full bg-white rounded p-5 shadow-2xl">
+          <div className="flex items-center justify-start gap-5  w-full bg-gray-100 rounded p-5 shadow-2xl">
             <FaMoneyBill className="font-bold text-sm" />
             <div>
               <h3 className="font-bold text-xl">
@@ -66,7 +66,7 @@ function RidePopUp(props) {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-3 mb-3 ">
+        <div className="flex flex-col items-center gap-3 mb-3 mt-5">
           <button
             className="rounded-xl p-3 bg-black text-white w-[90%] font-bold hover:bg-gray-600 "
             onClick={() => {

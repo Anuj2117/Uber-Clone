@@ -62,8 +62,7 @@ function getOtp(num) {
 }
 
 export async function createRide({ user, pickup, destination, vehicleType }) {
-  //console.log(pickup, destination, vehicleType +"in services");
-
+  
   if (!pickup || !destination || !vehicleType) {
     throw new Error("All fields are required");
   }
@@ -93,8 +92,6 @@ export async function confirmRide({ rideId, captain }) {
     {
       status: "accepted",
       captain: captain._id,
-    },{
-      new:true
     }
   );
 
@@ -178,7 +175,7 @@ export async function endRide({ rideId, captain }) {
     })
     .populate("user")
     .populate("captain")
-    .populate("+otp");
+    .select("+otp");
 
   if (!ride) {
     throw new Error("Ride not found");

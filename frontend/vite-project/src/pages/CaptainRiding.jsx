@@ -4,6 +4,7 @@ import map from "../assets/map.png";
 import FinishRide from "../components/FinishRide";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import LiveTracking from "../components/LiveTracking"
 function CaptainRiding() {
 
   const [finishRidePanel, setFinishRidePanel] = useState(false);
@@ -33,7 +34,7 @@ function CaptainRiding() {
     <>
       <div>
         <div className="w-full h-[65vh]">
-          <img src={map} alt="" className="w-full h-full " />
+         <LiveTracking/>
         </div>
 
         <div className="flex w-full items-center justify-between p-5 h-[23vh] bg-gray-100">

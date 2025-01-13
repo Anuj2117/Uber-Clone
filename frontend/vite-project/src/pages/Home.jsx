@@ -228,12 +228,14 @@ function Home() {
         <div className="h-[75%] w-screen ">
          <LiveTracking/>
         </div>
-        <div className="absolute top-0 w-full h-screen flex flex-col justify-end">
+
+        <div className="absolute bottom-8 w-full h-screen flex flex-col justify-end">
           <div className="h-[30%] p-6 bg-white relative">
             {panelOpen ? (
               <MdOutlineKeyboardArrowDown
-                className="absolute top-6 right-5 text-4xl"
-                onClick={() => setPanelOpen(false)}
+                className="absolute top-3 right-5 text-4xl "
+                onClick={() =>{ setPanelOpen(false)
+                }}
               />
             ) : (
               <MdOutlineKeyboardArrowUp
@@ -270,7 +272,7 @@ function Home() {
             </form>
             <button
               onClick={findTrip}
-              className="bg-black text-white px-4 py-2 rounded-lg mt-3 w-full"
+              className="bg-black text-white px-4 py-2 rounded-lg mt-3 w-full mb-5"
             >
               Find Trip
             </button>

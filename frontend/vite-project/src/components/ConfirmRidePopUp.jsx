@@ -5,8 +5,10 @@ import { FaMoneyBill } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { CaptainDataContext } from "../context/CaptainContext";
 
 function ConfirmRidePopUp(props) {
+  
   const navigate = useNavigate();
   const [otp, setOtp] = useState(Array(6).fill(""));
 
@@ -53,10 +55,11 @@ function ConfirmRidePopUp(props) {
           },
         }
       );
+      console.log(response, ">>>>>>>status???");
      
       if (response.status === 200) {
-        props.setConfirmRidePopupPanel(false);
-        props.setRidePopupPanel(false);
+        props.setConfirmRidePopUpOpen(false);
+        props.setRidePopUpOpen(false);
         navigate("/captain-riding", { state: { ride: props.ride } });
       }
     } catch (error) {
@@ -76,7 +79,7 @@ function ConfirmRidePopUp(props) {
 
         <div className="flex flex-col items-center">
           <div className="flex items-center justify-start bg-white rounded-md shadow-sm gap-5 w-full p-4 mb-2">
-            <HiLocationMarker className="font-bold text-xl text-green-600" />
+            <HiLocationMarker className="font-bold text-xl " />
             <div>
               <h3 className="font-bold text-xl">563/11-A</h3>
               <p className="font-bold text-sm text-gray-500">
@@ -86,7 +89,7 @@ function ConfirmRidePopUp(props) {
           </div>
 
           <div className="flex items-center justify-start gap-5 w-full bg-white rounded-md shadow-sm p-5 mb-2">
-            <FaStop className="font-bold text-sm text-red-600" />
+            <FaStop className="font-bold text-sm " />
             <div>
               <h3 className="font-bold text-xl">Third Wave Coffee</h3>
               <p className="font-bold text-sm text-gray-500">
@@ -104,6 +107,7 @@ function ConfirmRidePopUp(props) {
               <p className="font-bold text-sm text-gray-500">CASH UPI </p>
             </div>
           </div>
+          
         </div>
 
         <div className="flex flex-col items-center gap-3 mb-3 mt-3 bg-gray-100 w-full">
@@ -125,12 +129,7 @@ function ConfirmRidePopUp(props) {
                 />
               ))}
 
-              <button
-                className="bg-green-500 p-2 rounded-xl font-bold ml-2"
-                type="submit"
-              >
-                Verify Otp
-              </button>
+             
             </div>
 
             <div className="flex  flex-col items-center gap-2 mb-4 w-[100%]">

@@ -158,7 +158,7 @@ function CaptainHome() {
             ridePopUpOpen={ridePopUpOpen}
             setRidePopUpOpen={setRidePopUpOpen}
             confirmridePopUpOpen={confirmridePopUpOpen}
-            setConfirmRidePopUpOpen={setConfirmRidePopUpOpen}
+            setConfirmRidePopUpOpen={setConfirmRidePopUpOpen}  // setConfirmRidePanelOpen
           />
         </div>
       </div>
