@@ -114,7 +114,7 @@ function CaptainHome() {
     <>
       <div className="bg-gray-100">
         <div className="">
-          <div className="flex items-center w-full h-[50vh] ">
+          <div className="flex items-center w-full h-[47vh] ">
            <LiveTracking/>
           </div>
 
