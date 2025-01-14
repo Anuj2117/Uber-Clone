@@ -8,7 +8,7 @@ function RidePopUp(props) {
   return (
     <>
       <div className="">
-        <h3 className="text-2xl font-bold text-center m-5">
+        <h3 className="text-2xl font-bold text-center m-1">
           New Ride Available
         </h3>
         <div className="h-[0.2vh] bg-gray-200"></div>
@@ -66,7 +66,7 @@ function RidePopUp(props) {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-3 mb-3 mt-5">
+        <div className="flex flex-col items-center gap-3  mt-2">
           <button
             className="rounded-xl p-3 bg-black text-white w-[90%] font-bold hover:bg-gray-600 "
             onClick={() => {

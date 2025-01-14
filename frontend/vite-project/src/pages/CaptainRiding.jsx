@@ -42,12 +42,16 @@ function CaptainRiding() {
             Distence -<span className="text-gray-600"> 3 KM </span>
           </h3>
           <button
-            className="bg-black text-white p-4 rounded-xl text-sm font-bold"
+            className="bg-black text-white p-4 rounded text-sm font-bold"
             onClick={() => setFinishRidePanel(true)}
           >
             {" "}
             Complete Ride
           </button>
+
+        </div>
+        <div>
+          <p></p>
         </div>
 
         <div

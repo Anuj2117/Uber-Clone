@@ -31,7 +31,7 @@ const FinishRide = (props) => {
   return (
     <div className="flex flex-col items-center p-3">
   
-      <h3 className="text-2xl font-bold mb-5">Finish this Ride</h3>
+      <h3 className="text-2xl font-bold mb-4">Finish this Ride</h3>
       <div className="flex items-center justify-between p-4 border-2 border-yellow-400 rounded-lg mt-4 w-full">
         <div className="flex items-center gap-3 ">
           <FaUser className="bg-gray-200 p-3 rounded-full text-5xl"/>
@@ -73,10 +73,10 @@ const FinishRide = (props) => {
         </div>
       </div>
 
-      <div className="mt-10 w-full">
+      <div className="mt-3 w-full">
         <button
           onClick={endRide}
-          className="w-full mt-5 flex  text-lg justify-center bg-black text-white font-semibold p-3 rounded-lg"
+          className="w-full mt-4 flex  text-lg justify-center bg-black text-white font-semibold p-3 rounded-lg"
         >
           Finish Ride
         </button>

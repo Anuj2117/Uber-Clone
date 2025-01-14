@@ -17,12 +17,12 @@ function LocationSearchPanel({ suggestions, setPickup, setDestination, activeFie
       <div>
         {suggestions.length === 0 ? (
           // Render skeletons when suggestions are empty
-          <Box sx={{ width: "100%" , mt:4 }}>
-            <Skeleton variant="rectangular" height={50} animation="wave" sx={{ borderRadius: 1, marginBottom: 2 }} />
-            <Skeleton variant="rectangular" height={50} animation="wave" sx={{ borderRadius: 1, marginBottom: 2 }} />
-            <Skeleton variant="rectangular" height={50} animation="wave" sx={{ borderRadius: 1, marginBottom: 2 }} />
-            <Skeleton variant="rectangular" height={50} animation="wave" sx={{ borderRadius: 1, marginBottom: 2 }} />
-            <Skeleton variant="rectangular" height={50} animation="wave" sx={{ borderRadius: 1, marginBottom: 2 }} />
+          <Box sx={{ width: "100%" , mt:4 }} className="flex flex-col items-center ">
+            <Skeleton variant="rectangular" height={50}  className="w-[87%]" animation="wave" sx={{ borderRadius: 1, marginBottom: 2 }}  />
+            <Skeleton variant="rectangular" height={50} animation="wave" className="w-[87%]" sx={{ borderRadius: 1, marginBottom: 2 }} />
+            <Skeleton variant="rectangular" height={50} animation="wave" className="w-[87%]" sx={{ borderRadius: 1, marginBottom: 2 }} />
+            <Skeleton variant="rectangular" height={50} animation="wave" className="w-[87%]" sx={{ borderRadius: 1, marginBottom: 2 }} />
+            <Skeleton variant="rectangular" height={50} animation="wave" className="w-[87%]" sx={{ borderRadius: 1, marginBottom: 2 }} />
             
           </Box>
         ) : (

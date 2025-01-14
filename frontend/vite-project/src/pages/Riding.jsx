@@ -96,7 +96,7 @@ function Riding() {
 
             <div className="w-full h-[0.2vh] bg-gray-200 rounded-full"></div>
 
-            <div className="flex flex-col items-center mt-5 gap-2">
+            <div className="flex flex-col items-center  gap-2">
               <div className="flex items-center justify-start gap-5  w-full bg-white rounded p-4">
                 <HiLocationMarker className="font-bold text-xl" />
                 <div>
@@ -104,6 +104,7 @@ function Riding() {
                   <p className="text-sm font-bold">{ride?.pickup}</p>
                 </div>
               </div>
+              <div className="w-full h-[0.2vh] bg-gray-200 rounded-full "></div>
               <div className="flex items-center justify-start gap-5  w-full bg-white rounded p-5">
                 <FaStop className="font-bold text-sm" />
                 <div>
@@ -111,7 +112,7 @@ function Riding() {
                   <p className="text-sm font-bold">{ride?.destination}</p>
                 </div>
               </div>
-
+              <div className="w-full h-[0.2vh] bg-gray-200 rounded-full "></div>
               <div className="flex items-center gap-5  w-full bg-white rounded p-5">
                 <FaMoneyBill className="font-bold text-sm" />
                 <div>
@@ -122,7 +123,6 @@ function Riding() {
             </div>
           </div>
 
-          <div className="w-full h-[0.2vh] bg-gray-200 rounded-full "></div>
 
           <div className="flex items-center justify-center  w-full p-5">
             <button className="w-full bg-black text-white font-bold p-3 rounded MB-5">

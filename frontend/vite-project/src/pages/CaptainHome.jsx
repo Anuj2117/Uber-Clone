@@ -7,7 +7,7 @@ import { FaUser } from "react-icons/fa";
 import CaptainDetails from "../components/CaptainDetails";
 import RidePopUp from "../components/RidePopUp";
 import ConfirmRidePopUp from "../components/ConfirmRidePopUp";
-
+import sound from "../assets/notification.mp3"
 import { CaptainDataContext } from "../context/CaptainContext";
 import { SocketContext } from "../context/SocketContext";
 import LiveTracking from "../components/LiveTracking";
@@ -50,7 +50,12 @@ function CaptainHome() {
     setRide(data);
     setRidePopUpOpen(true);
   });
-
+  useEffect(() => {
+    if (ridePopUpOpen) {
+      const audio = new Audio(sound);
+      audio.play().catch((error) => console.error("Error playing notification sound:", error));
+    }
+  }, [ridePopUpOpen]);
 
   async function confirmRide() {
     const response = await axios.post(
@@ -109,7 +114,7 @@ function CaptainHome() {
     <>
       <div className="bg-gray-100">
         <div className="">
-          <div className="flex items-center w-full h-[60vh] ">
+          <div className="flex items-center w-full h-[50vh] ">
            <LiveTracking/>
           </div>
 

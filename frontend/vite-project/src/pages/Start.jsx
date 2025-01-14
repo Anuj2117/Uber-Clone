@@ -21,7 +21,7 @@ function Start() {
   return (
     <div className="h-screen w-full flex flex-col">
       <div
-        className="relative bg-gray-300 h-[70vh] flex items-center justify-center overflow-hidden"
+        className="relative bg-gray-300 h-[65vh] flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url(${images[currentImage]})`,
           backgroundSize: "cover",

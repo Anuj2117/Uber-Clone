@@ -71,7 +71,7 @@ function ConfirmRidePopUp(props) {
   return (
     <>
       <div className="bg-white rounded-lg shadow-lg ">
-        <h3 className="text-2xl font-bold text-center mb-4">
+        <h3 className="text-2xl font-bold text-center mb-2">
           Confirm Your New Ride
         </h3>
 
@@ -110,12 +110,12 @@ function ConfirmRidePopUp(props) {
           
         </div>
 
-        <div className="flex flex-col items-center gap-3 mb-3 mt-3 bg-gray-100 w-full">
+        <div className="flex flex-col items-center gap-3 mt-3 bg-gray-100 w-full">
           <form
             onSubmit={(e) => submitHandler(e)}
             className="flex flex-col items-center gap-3 mb-3 mt-3"
           >
-            <div className="flex gap-2 mb-4">
+            <div className="flex gap-2 mb-2">
               {otp.map((digit, index) => (
                 <input
                   key={index}
